@@ -1,0 +1,118 @@
+<div class="container">
+    <form #frm="ngForm" (ngSubmit)="createEmployee()" class="col-md-6">
+        <div class="form-group">
+            <label for="my-input">Name</label>
+            <input placeholder="Employee Name" class="form-control" type="text" name="name" [(ngModel)]="name"
+                #nameUser="ngModel" required pattern="[a-zA-Z][a-zA-Z]+">
+            <div *ngIf="nameUser.touched" class="alert alert-danger">
+                <div *ngIf="nameUser.errors?.required">
+                    Name is required
+                </div>
+                <div *ngIf="nameUser.errors?.pattern">
+                    Name is invalid
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="my-input">Address</label>
+            <input placeholder="Employee Address" class="form-control" type="text" name="address" [(ngModel)]="address"
+                #addressUser="ngModel" required >
+            <div *ngIf="addressUser.touched" class="alert alert-danger">
+                <div *ngIf="addressUser.errors?.required">
+                    Address is required
+                </div>
+                <div *ngIf="addressUser.errors?.pattern">
+                    Address is invalid
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="my-input">DOB</label>
+            <input placeholder="Employee DOB" class="form-control" type="text" name="dob" [(ngModel)]="dob"
+                #dobUser="ngModel" required pattern="[0-9]*">
+            <div *ngIf="dobUser.touched" class="alert alert-danger">
+                <div *ngIf="dobUser.errors?.required">
+                    DOB is required
+                </div>
+                <div *ngIf="contactUser.errors?.pattern || contactUser.errors?.minlength">
+                    DOB is invalid
+                </div>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="my-input">Phone</label>
+            <input placeholder="Employee Phone number" class="form-control" type="text" name="phone" [(ngModel)]="phone"
+                #contactUser="ngModel" required pattern="[0-9]*" maxlength="10" minlength="10">
+            <div *ngIf="contactUser.touched" class="alert alert-danger">
+                <div *ngIf="contactUser.errors?.required">
+                    Contact is required
+                </div>
+                <div *ngIf="contactUser.errors?.pattern || contactUser.errors?.minlength">
+                    Contact is invalid
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="my-input">Degree</label>
+            <input placeholder="Employee Degree" class="form-control" type="text" name="degree" [(ngModel)]="degree" 
+                #degreeUser="ngModel" required pattern="[a-zA-Z][a-zA-Z]+">
+                <div *ngIf="degreeUser.touched" class="alert alert-danger">
+                    <div *ngIf="degreeUser.errors?.required">
+                        Contact is required
+                    </div>
+                    <div *ngIf="degreeUser.errors?.pattern || contactUser.errors?.minlength">
+                        Contact is invalid
+                    </div>
+    
+                </div>
+           
+        </div>
+
+        <div class="form-group">
+            <label for="my-input">Marks</label>
+            <input placeholder="Employee Degree Marks" class="form-control" type="text" name="marks" [(ngModel)]="marks"
+                #marksUser="ngModel" required pattern="[0-9]*">
+            <div *ngIf="marksUser.touched" class="alert alert-danger">
+                <div *ngIf="marksUser.errors?.required">
+                    Marks is required
+                </div>
+                <div *ngIf="marksUser.errors?.pattern">
+                    Marks is invalid
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="my-input">Stream</label>
+            <input placeholder="Employee Degree stream" class="form-control" type="text" name="stream"
+                [(ngModel)]="stream" #streamUser="ngModel" required pattern="[a-zA-Z][a-zA-Z]+">
+            <div *ngIf="streamUser.touched" class="alert alert-danger">
+                <div *ngIf="streamUser.errors?.required">
+                    Stream is required
+                </div>
+                <div *ngIf="streamUser.errors?.pattern">
+                    Stream is invalid
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="my-input">College</label>
+            <input placeholder="Employee Degree college" class="form-control" type="text" name="college"
+                [(ngModel)]="college" #collegeUser="ngModel" required pattern="[a-zA-Z][a-zA-Z]+">
+            <div *ngIf="collegeUser.touched" class="alert alert-danger">
+                <div *ngIf="collegeUser.errors?.required">
+                    College is required
+                </div>
+                <div *ngIf="collegeUser.errors?.pattern">
+                    College is invalid
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+</div>

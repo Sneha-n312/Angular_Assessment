@@ -1,0 +1,52 @@
+<div class="container">
+
+    <form class="col-md-6" (ngSubmit)="editEmployee()">
+        <div class="form-group">
+            <h2 >Edit {{emp.name}}</h2>
+        </div>
+        <div class="form-group">
+            <label for="my-input">Name</label>
+            <input placeholder="Name" class="form-control" type="text" name="name" [(ngModel)]="employee.name">
+        </div>
+        <div class="form-group">
+            <label for="my-input">Address</label>
+            <input placeholder="Address" class="form-control" type="text" name="address" [(ngModel)]="employee.address">
+        </div>
+        <div class="form-group">
+            <label for="my-input">DOB</label>
+            <input placeholder="DOB" class="form-control" type="text" name="dob"
+                [(ngModel)]="employee.dob">
+        </div>
+
+        <div class="form-group">
+            <label for="my-input">Phone</label>
+            <input placeholder="Phone" class="form-control" type="text" name="phone"
+                [(ngModel)]="employee.phone">
+        </div>
+
+        <div class="form-group">
+            <label for="my-input">Degree</label>
+            <input placeholder="Phone" class="form-control" type="text" name="phone"
+                [(ngModel)]="employee.phone">
+        </div>
+
+        <div class="form-group">
+            <label for="my-input">Marks</label>
+            <input placeholder="Phone" class="form-control" type="text" name="marks"
+                [(ngModel)]="employee.marks">
+        </div>
+
+        <div class="form-group">
+            <label for="my-input">Stream</label>
+            <input placeholder="Phone" class="form-control" type="text" name="stream"
+                [(ngModel)]="employee.stream">
+        </div>
+
+        <div class="form-group">
+            <label for="my-input">College</label>
+            <input placeholder="Phone" class="form-control" type="text" name="college"
+                [(ngModel)]="employee.college">
+        </div>
+        <button class="btn btn-primary" type="submit">Edit details</button>
+    </form>
+</div>

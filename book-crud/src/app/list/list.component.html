@@ -1,0 +1,41 @@
+<div class="container">
+  <table class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Degree</th>
+        <th scope="col">Marks</th>
+        <th scope="col">Stream</th>
+        <th scope="col">College</th>
+        
+        <th></th>
+      </tr>
+    </thead>
+    <tbody *ngIf="employees.length > 0">
+      <tr *ngFor="let employee of employees">
+        <th scope="row"> {{employee.id}} </th>
+        <td> {{employee.name}} </td>
+        <td> {{employee.address}} </td>
+        <td> {{employee.dob}} </td>
+        <td> {{employee.phone}} </td>
+        <td> {{employee.degree}} </td>
+        <td> {{employee.marks}} </td>
+        <td> {{employee.stream}} </td>
+        <td> {{employee.college}} </td>
+
+        
+        <td>
+          <a routerLink="/edit/{{employee.id}}" class="btn btn-sm btn-dark">Edit</a> | 
+          <a routerLink="/delete/{{employee.id}}" class="btn btn-sm btn-danger">Delete</a> | 
+          <ngbd-modal-basic></ngbd-modal-basic>
+          
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>

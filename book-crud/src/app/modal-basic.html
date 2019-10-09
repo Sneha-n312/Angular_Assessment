@@ -1,0 +1,60 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Details</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form action="" class="form-group">
+        <div class="row">
+            <div class="col-12">
+                <label for="name">Full name</label>
+                <input class="form-control" type="text" name="name" id="name" placeholder="First name/ Last name" ><br>
+                
+
+                <label for="name">DOB</label>
+                <input class="form-control" type="text" name="name" id="name" placeholder="First name/ Last name"><br>
+                
+
+
+                <label for="address">Address</label>
+                <input class="form-control" type="text" name="address" id="address" placeholder="No. 123, 51st Street"><br>
+                
+
+                <label for="city">Phone</label>
+                <input class="form-control" type="text" name="phone" id="phone" placeholder="Phone"><br>
+                
+
+                <label for="state">Degree</label>
+                <input class="form-control" type="text" name="degree" id="degree" placeholder="College Degree"><br>
+                
+
+                <label for="pincode">Marks</label>
+                <input class="form-control" type="text" name="marks" id="marks" placeholder="Marks Scored"><br>
+                
+
+                <label for="pincode">Stream</label>
+                <input class="form-control" type="text" name="stream" id="stream" placeholder="Degree Stream"><br>
+
+                <label for="pincode">College</label>
+                <input class="form-control" type="text" name="college" id="college" placeholder="Degree College"><br>
+                
+
+            </div>
+            
+        </div>
+        <button type="button" class="btn btn-block btn-outline-success" id="purchaseButton">Buy</button>
+    </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+    </div>
+  </ng-template>
+  
+  <button class="class=btn btn-info" (click)="open(content)">View Details</button>
+  
+  <hr>
+ 
+
+   
